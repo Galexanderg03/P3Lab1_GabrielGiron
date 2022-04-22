@@ -5,15 +5,15 @@
 using namespace std;
 
 float Opcion;
-float A = 0;
-float B = 0;
-float C = 0;
+float A;
+float B;
+float C;
 
 
 int main()
 {
 	cout << "---Teorema de Pitagoras---" << "\n";
-	cout << "Seleccione Incognita: A/B/C: " << "\n";
+	cout << "Seleccione Incognita: A/B/C: ";
 	cin >> Opcion;
 
 	if(Opcion == 1)
@@ -21,11 +21,38 @@ int main()
 		cout << "Ecuacion Inicial: " << "\n";
 		cout << "C^2 = A^2 + B^2 " << "\n";
 		cout << "Despejar para A: " << "\n";
-		cout << "Ingrese valor para C: " << "\n";
+		cout << "Ingrese valor para C: ";
 		cin >> C;
-		cout << "Ingrese valor para B: " << "\n";
+		cout << "Ingrese valor para B: ";
 		cin >> B;
-
+		cout << "Ecuacion: A^2 = " << C << "^2 - " << B << "^2 " << "\n";
+		C = C * C;
+		B = B * B;
+		cout << "Ecuacion: A^2 = " << C << " - " << B << "\n";
+		A = C - B;
+		cout << "A^2 = " << A;
+		
 	}
+	else if(Opcion == 2)
+	{
+		
+	}
+	else if(Opcion == 3)
+	{
+		cout << "Ecuacion Inicial: " << "\n";
+		cout << "C^2 = A^2 + B^2 " << "\n";
+		cout << "Ya Esta Despejado " << "\n";
+		cout << "Ingrese valor para A: ";
+		cin >> A;
+		cout << "Ingrese valor para B: ";
+		cin >> B;
+		cout << "Ecuacion: C^2 " << A << "^2 + " << B << "^2 " << "\n";
+		A = A * A;
+		B = B * B;
+		cout << "Ecuacion: C^2 = " << A << " + " << B << "\n";
+		C = A + B;
+		cout << "A^2 = " << C;
+	}
+	return 0;
 }
 
